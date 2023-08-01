@@ -1,1 +1,23 @@
 <app-button [label]="label" [icon]="icon" [type]="type" giveColor="warn" (onClick) ="appFn($event)"></app-button>
+
+<app-dropdown-cc
+[parentForm]="FilterForm"
+controlName="statusGroup"
+  [title]="'Select Status'"
+  [optionsList]="StatusGroupList"
+  (onSelect)="onSelect($event)"
+></app-dropdown-cc>
+
+
+<!--
+@Input() parentForm: any;
+  title: string = '';
+  placeholder: string = '';
+  controlName: string = '';
+  required: boolean = false;
+  multiple: boolean = false;
+  disabled: boolean = false;
+  optionsList: any[] = [];
+  control:FormControl = new FormControl('');
+
+ -->

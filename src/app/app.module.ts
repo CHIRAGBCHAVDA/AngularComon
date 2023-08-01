@@ -11,13 +11,19 @@ import { MatPaginatorModule } from '@angular/material/paginator';
 import { DynamicPipe } from './dynamic.pipe';
 import { ButtonComponent } from './button/button.component';
 import { MatButtonModule } from '@angular/material/button';
+import { DropdownCCComponent } from './dropdown-cc/dropdown-cc.component';
+import { FormControl, FormsModule, ReactiveFormsModule } from '@angular/forms';
+import { MatOptionModule } from '@angular/material/core';
+import { MatFormFieldModule } from '@angular/material/form-field';
+import { MatSelectModule } from '@angular/material/select';
 
 @NgModule({
   declarations: [
     AppComponent,
     TableComponent,
     DynamicPipe,
-    ButtonComponent
+    ButtonComponent,
+    DropdownCCComponent
   ],
   imports: [
     BrowserModule,
@@ -26,7 +32,14 @@ import { MatButtonModule } from '@angular/material/button';
     MatButtonModule,
     MatTableModule,
     MatIconModule,
-    MatPaginatorModule
+    MatPaginatorModule,
+    FormsModule,
+    MatOptionModule,
+    MatFormFieldModule,
+    MatSelectModule,
+    ReactiveFormsModule,
+    
+
   ],
   providers: [],
   bootstrap: [AppComponent]

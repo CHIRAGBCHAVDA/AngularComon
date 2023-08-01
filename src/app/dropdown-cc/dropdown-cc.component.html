@@ -1,0 +1,23 @@
+<mat-form-field appearance="outline" [formGroup]="parentForm" >
+  <mat-label>{{ title }}</mat-label>
+  <mat-select
+  [formControlName]="controlName"
+    [required]="required"
+    [multiple]="multiple"
+    [disabled]="disabled"
+    (selectionChange)="onSelectEvent($event)"
+  >
+    <mat-option
+      *ngFor="let options of optionsList"
+      value='{{options.value }}'
+      >{{ options.viewValue }}</mat-option
+    >
+
+  </mat-select>
+
+</mat-form-field>
+<div *ngIf="control.invalid && control.touched">
+  <mat-error *ngIf="parentForm.get(controlName).hasError('required')">
+    {{ title }} is <strong>required</strong>
+  </mat-error>
+</div>
